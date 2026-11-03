@@ -1,0 +1,646 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd9e8,
+        #ffeaf2,
+        #ffc9dc
+    );
+
+    color: #a94d72;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-glow {
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.35);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-one {
+    top: -100px;
+    left: -100px;
+}
+
+.glow-two {
+    bottom: -100px;
+    right: -100px;
+}
+
+
+/* =========================
+   HALAMAN
+========================= */
+
+.page {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 18px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.page.active {
+    display: flex;
+    animation: pageAppear 1s ease;
+}
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   KARTU UTAMA
+========================= */
+
+.card {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.68);
+
+    border: 1px solid rgba(255,255,255,0.85);
+
+    box-shadow:
+        0 15px 45px rgba(210,95,140,0.15);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* =========================
+   TEKS
+========================= */
+
+h1 {
+    font-size: clamp(25px, 7vw, 37px);
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    color: #d95787;
+}
+
+.script {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(42px, 11vw, 58px);
+
+    color: #e66c99;
+
+    line-height: 1.4;
+}
+
+.description {
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #a85c7b;
+
+    margin-top: 12px;
+}
+
+.subtitle {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #d47a9b;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.btn {
+    display: inline-block;
+
+    border: none;
+    outline: none;
+
+    background: linear-gradient(
+        135deg,
+        #ff9fbe,
+        #ed6e9b
+    );
+
+    color: white;
+
+    padding: 14px 27px;
+
+    margin-top: 25px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px rgba(220,90,140,0.23);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 10px 25px rgba(220,90,140,0.35);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   HATI UTAMA
+========================= */
+
+.main-heart {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    display: inline-block;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================
+   ANIMASI HATI TERBANG
+========================= */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   SURAT ROMANTIS
+========================= */
+
+.letter-box {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: #fff8fb;
+
+    border: 1px solid #ffe0eb;
+
+    text-align: left;
+
+    line-height: 2;
+
+    font-size: 13px;
+
+    color: #98516f;
+
+    animation: pageAppear 1s ease;
+}
+
+.letter-box.show {
+    display: block;
+}
+
+.letter-box p {
+    margin-bottom: 13px;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 30px;
+
+    color: #df6c98;
+
+    text-align: right;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   TAMAN BUNGA
+========================= */
+
+.garden {
+    min-height: 210px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 20px 0 5px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BENTUK BUNGA
+========================= */
+
+.flower {
+    position: relative;
+
+    width: 65px;
+
+    height: 175px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    transform-origin: bottom;
+
+    animation: grow 2s ease backwards;
+}
+
+.flower:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.flower:nth-child(3) {
+    animation-delay: .8s;
+}
+
+.flower:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.flower:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+@keyframes grow {
+
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+
+}
+
+
+/* =========================
+   BATANG BUNGA
+========================= */
+
+.stem {
+    width: 5px;
+
+    height: 100px;
+
+    background: linear-gradient(
+        #80bd75,
+        #428d60
+    );
+
+    border-radius: 10px;
+
+    position: relative;
+}
+
+
+/* =========================
+   DAUN
+========================= */
+
+.leaf {
+    width: 23px;
+
+    height: 12px;
+
+    background: #70b979;
+
+    position: absolute;
+
+    border-radius: 100% 0 100% 0;
+}
+
+.leaf.left {
+    left: -20px;
+
+    top: 35px;
+
+    transform: rotate(20deg);
+}
+
+.leaf.right {
+    right: -20px;
+
+    top: 60px;
+
+    transform: rotate(70deg) scaleX(-1);
+}
+
+
+/* =========================
+   KELopak BUNGA
+========================= */
+
+.bloom {
+    position: absolute;
+
+    bottom: 95px;
+
+    width: 50px;
+
+    height: 50px;
+
+    animation: sway 3s ease-in-out infinite;
+
+    transform-origin: bottom;
+}
+
+.petal {
+    position: absolute;
+
+    width: 22px;
+
+    height: 29px;
+
+    border-radius: 50%;
+
+    background: #ff8db4;
+
+    left: 14px;
+
+    top: 0;
+
+    transform-origin: 50% 25px;
+}
+
+.petal:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.petal:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.petal:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+
+/* =========================
+   WARNA BUNGA
+========================= */
+
+.flower:nth-child(2) .petal {
+    background: #ffb0ce;
+}
+
+.flower:nth-child(3) .petal {
+    background: #f7a0b7;
+}
+
+.flower:nth-child(4) .petal {
+    background: #e99acb;
+}
+
+.flower:nth-child(5) .petal {
+    background: #ff8fb7;
+}
+
+
+/* =========================
+   TENGAH BUNGA
+========================= */
+
+.center {
+    position: absolute;
+
+    width: 13px;
+
+    height: 13px;
+
+    background: #ffe69a;
+
+    border-radius: 50%;
+
+    left: 18px;
+
+    top: 18px;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   GOYANG BUNGA
+========================= */
+
+@keyframes sway {
+
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(7deg);
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 22px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #c17a96;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media(max-width: 480px) {
+
+    .page {
+        padding: 20px 15px;
+    }
+
+    .card {
+        padding: 28px 19px;
+
+        border-radius: 25px;
+    }
+
+    .garden {
+        gap: 5px;
+
+        min-height: 185px;
+    }
+
+    .flower {
+        transform: scale(.85);
+
+        margin: 0 -3px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .letter-box {
+        padding: 18px;
+
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 13px 23px;
+    }
+
+}
