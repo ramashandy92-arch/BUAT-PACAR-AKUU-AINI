@@ -1,0 +1,882 @@
+
+/* ==========================================
+   LITTLE HAPPINESS FOR YOU
+   FULL STYLE CSS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #f8a9c4;
+    --light-pink: #fff0f5;
+    --dark-pink: #d96b99;
+    --purple: #c9a7e8;
+    --text: #76546a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background: #fff5f8;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   HALAMAN PEMBUKA
+========================================== */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffe0ec, transparent 40%),
+        radial-gradient(circle at 80% 80%, #f4dafa, transparent 40%),
+        #fff4f8;
+
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 45px 25px;
+
+    background: rgba(255, 255, 255, .9);
+
+    border: 2px solid white;
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 50px #e9a8c733;
+
+    animation: appear 1s ease;
+}
+
+.intro-flower {
+    font-size: 75px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.small-title,
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--dark-pink);
+    font-weight: 700;
+}
+
+.intro h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--dark-pink);
+    font-size: clamp(28px, 6vw, 38px);
+    margin: 20px 0;
+}
+
+.intro-text {
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.main-button {
+    background: linear-gradient(135deg, #f5a6c4, #d994d5);
+
+    color: white;
+    border: none;
+
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 20px #d994d555;
+
+    transition: .3s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #d994d577;
+}
+
+.main-button:active {
+    transform: scale(.96);
+}
+
+.intro-decoration {
+    margin-top: 25px;
+    color: #e9a1c1;
+    letter-spacing: 10px;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: linear-gradient(140deg, #ffe1eb, #f8e4f8);
+}
+
+.hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(32px, 7vw, 55px);
+    color: #d96b99;
+    margin: 20px 0;
+}
+
+.hero-text {
+    max-width: 450px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.hero-flower {
+    font-size: 45px;
+    margin-top: 25px;
+    animation: float 3s infinite ease-in-out;
+}
+
+
+/* ==========================================
+   TEDDY BEAR
+========================================== */
+
+.bear-section {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.bear {
+    font-size: 110px;
+    animation: bearBounce 2s infinite ease-in-out;
+}
+
+.bear-section h2,
+.message-section h2,
+.flower-section h2,
+.interactive-section h2,
+.letter-section h2 {
+    color: #cf759e;
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(23px, 5vw, 30px);
+    margin: 15px 0;
+}
+
+.bear-section p {
+    max-width: 450px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   PESAN ROMANTIS
+========================================== */
+
+.message-section {
+    padding: 60px 20px;
+    background: #fff0f5;
+    text-align: center;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.section-heading span {
+    font-size: 22px;
+}
+
+.message-card {
+    max-width: 650px;
+    margin: 30px auto 0;
+
+    background: white;
+    padding: 35px;
+
+    border-radius: 25px;
+
+    text-align: left;
+
+    box-shadow: 0 10px 35px #e6a7c322;
+
+    line-height: 1.9;
+}
+
+.message-card h3 {
+    color: #d96b99;
+    margin-bottom: 15px;
+}
+
+.message-card p {
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    color: #d96b99;
+    font-family: 'Pacifico', cursive;
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   TAMAN BUNGA
+========================================== */
+
+.flower-section {
+    text-align: center;
+    padding: 75px 15px;
+    overflow: hidden;
+    background: #fff9fb;
+}
+
+.section-description {
+    max-width: 450px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+/* AREA TAMAN */
+
+.garden {
+    height: 350px;
+    width: min(100%, 650px);
+    margin: 30px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: clamp(12px, 5vw, 40px);
+
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* TANAH */
+
+.garden::after {
+    content: "";
+    position: absolute;
+
+    width: 90%;
+    height: 12px;
+
+    bottom: 0;
+    left: 5%;
+
+    background: #b5d7a5;
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+
+/* SETIAP BUNGA */
+
+.flower {
+    width: 75px;
+    height: 300px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    transform-origin: bottom center;
+
+    animation: sway 4s infinite ease-in-out;
+}
+
+.flower-two {
+    animation-delay: .5s;
+    scale: .85;
+}
+
+.flower-three {
+    animation-delay: 1s;
+    scale: 1.15;
+}
+
+.flower-four {
+    animation-delay: .7s;
+    scale: .9;
+}
+
+.flower-five {
+    animation-delay: .3s;
+}
+
+
+/* BATANG BUNGA */
+
+.stem {
+    position: absolute;
+
+    bottom: 0;
+    left: 36px;
+
+    width: 5px;
+    height: 195px;
+
+    background: linear-gradient(
+        to right,
+        #70a96b,
+        #9acb82
+    );
+
+    border-radius: 10px;
+
+    z-index: 2;
+}
+
+
+/* DAUN BUNGA */
+
+.leaves i {
+    position: absolute;
+
+    bottom: 85px;
+    left: 36px;
+
+    width: 35px;
+    height: 17px;
+
+    background: #8ecb88;
+
+    border-radius: 100% 0 100% 0;
+
+    transform: rotate(-25deg);
+
+    z-index: 3;
+}
+
+.leaves i:nth-child(2) {
+    bottom: 125px;
+    left: 2px;
+
+    transform: rotate(25deg) scaleX(-1);
+}
+
+
+/* POSISI KEPALA BUNGA */
+
+.bloom {
+    position: absolute;
+
+    /*
+       Tinggi batang = 195px
+       Tinggi bunga = 300px
+       Posisi ujung batang dari atas = 105px
+       Jadi pusat bunga bertemu ujung batang.
+    */
+
+    top: 105px;
+    left: 37px;
+
+    width: 0;
+    height: 0;
+
+    z-index: 4;
+
+    animation: bloom 2s ease-out both;
+}
+
+
+/* KELOPAK BUNGA */
+
+.bloom span {
+    position: absolute;
+
+    width: 27px;
+    height: 43px;
+
+    background: linear-gradient(
+        #ffb8d1,
+        #ec78a8
+    );
+
+    border-radius: 50% 50% 35% 35%;
+
+    left: -13px;
+    top: -42px;
+
+    transform-origin: center 42px;
+}
+
+.bloom span:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.bloom span:nth-child(3) {
+    transform: rotate(120deg);
+}
+
+.bloom span:nth-child(4) {
+    transform: rotate(180deg);
+}
+
+.bloom span:nth-child(5) {
+    transform: rotate(240deg);
+}
+
+.bloom span:nth-child(6) {
+    transform: rotate(300deg);
+}
+
+
+/* TENGAH BUNGA */
+
+.center {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: -10px;
+    top: -10px;
+
+    border-radius: 50%;
+
+    background: #ffdb75;
+
+    z-index: 5;
+}
+
+
+/* TULISAN TAMAN */
+
+.flower-caption {
+    position: relative;
+    z-index: 6;
+
+    margin-top: 25px;
+
+    color: #cf759e;
+
+    font-family: 'Pacifico', cursive;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   TOMBOL KEJUTAN
+========================================== */
+
+.interactive-section {
+    background: #ffeff5;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.interactive-description {
+    margin-top: 15px;
+}
+
+.button-grid {
+    max-width: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+    margin: 30px auto;
+}
+
+.choice-button {
+    background: white;
+    color: #c86f98;
+
+    border: 2px solid #f8d3e2;
+    border-radius: 18px;
+
+    padding: 18px 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.choice-button:hover {
+    background: #fce0eb;
+    transform: translateY(-4px);
+}
+
+.choice-button:active {
+    transform: scale(.96);
+}
+
+.choice-message {
+    max-width: 550px;
+    min-height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    margin: auto;
+
+    border-radius: 20px;
+    background: white;
+
+    color: #c86f98;
+    line-height: 1.7;
+
+    box-shadow: 0 5px 20px #e6a7c322;
+}
+
+
+/* ==========================================
+   SURAT RAHASIA
+========================================== */
+
+.letter-section {
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.letter-icon {
+    font-size: 70px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.letter-section > p {
+    margin: 15px 0 25px;
+}
+
+.letter-content {
+    max-width: 600px;
+
+    padding: 30px;
+    margin: 30px auto;
+
+    border-radius: 25px;
+    background: #fff0f5;
+
+    text-align: left;
+    line-height: 1.9;
+
+    animation: appear .8s ease;
+}
+
+.letter-content h3 {
+    color: #d96b99;
+    margin-bottom: 15px;
+}
+
+.letter-content p {
+    margin-bottom: 15px;
+}
+
+.letter-ending {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: linear-gradient(135deg, #f9c9dc, #edc9ed);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-heart {
+    font-size: 55px;
+    color: #d96b99;
+    animation: heartBeat 1.5s infinite;
+}
+
+footer h2 {
+    font-family: 'Pacifico', cursive;
+    color: #c56891;
+    margin: 10px;
+}
+
+.footer-small {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   HATI MELAYANG
+========================================== */
+
+#floatingHearts {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 50;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+
+    animation: rise linear forwards;
+    opacity: .7;
+}
+
+
+/* ==========================================
+   TOMBOL MUSIK
+========================================== */
+
+.music-button {
+    position: fixed;
+
+    z-index: 80;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #f6a6c4, #d994d5);
+
+    color: white;
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px #d994d555;
+}
+
+
+/* ==========================================
+   ANIMASI
+========================================== */
+
+@keyframes rise {
+
+    from {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+@keyframes bearBounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+@keyframes sway {
+
+    0%, 100% {
+        rotate: -3deg;
+    }
+
+    50% {
+        rotate: 3deg;
+    }
+
+}
+
+@keyframes bloom {
+
+    from {
+        scale: .1;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+
+}
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE UNTUK HP
+========================================== */
+
+@media (max-width: 500px) {
+
+    .intro-card {
+        padding: 35px 20px;
+    }
+
+    .message-card {
+        padding: 25px 20px;
+    }
+
+    .garden {
+        gap: 5px;
+    }
+
+    .flower {
+        scale: .78;
+    }
+
+    .flower-two {
+        scale: .72;
+    }
+
+    .flower-three {
+        scale: .88;
+    }
+
+    .flower-four {
+        scale: .72;
+    }
+
+    .flower-five {
+        scale: .78;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+}
+
+
+/* ==========================================
+   AKSESIBILITAS
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+}
